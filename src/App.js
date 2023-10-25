@@ -30,13 +30,14 @@ function App() {
           </li>
           <li className="upward" style={{ marginLeft: "40rem" }}>
             <Link to='/cart' className="nav-buttons">
-              {/* <span class="material-icons">shopping_cart</span> */}cart{cart.length}
+            <span><span class="material-icons">shopping_cart </span>{cart.length}</span>  
+            
             </Link>
           </li>
           <li className="forward" >
             <Link to='/wishlist' className="nav-buttons">
-              {/* <i class="material-icons">favorite</i> */}
-              fevCart{fev.length}
+             <span><i class="material-icons">favorite</i>{fev.length}</span> 
+            
             </Link>
           </li>
         </ul>
