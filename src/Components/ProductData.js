@@ -1,7 +1,6 @@
 import React from 'react';
 import Product from './Product';
 import './index.css'
-
 export const product_data = [
     {
       id: 1,
@@ -73,13 +72,13 @@ export const product_data = [
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/8992923/pexels-photo-8992923.jpeg?auto=compress&cs=tinysrgb&w=200',
     },
-    {
-      id: 10,
-      name: 'Special food',
-      price: 200,
-      description: 'Description of the Product',
-      image: 'https://images.pexels.com/photos/16423835/pexels-photo-16423835/free-photo-of-tortilla-wraps-with-fries-and-sauce.jpeg?auto=compress&cs=tinysrgb&w=200'
-    },
+    // {
+    //   id: 10,
+    //   name: 'Special food',
+    //   price: 200,
+    //   description: 'Description of the Product',
+    //   image: 'https://images.pexels.com/photos/16423835/pexels-photo-16423835/free-photo-of-tortilla-wraps-with-fries-and-sauce.jpeg?auto=compress&cs=tinysrgb&w=200'
+    // },
     
   ];
   

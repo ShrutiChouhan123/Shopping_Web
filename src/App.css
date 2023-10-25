@@ -5,7 +5,7 @@
     background: #032542;
     padding: 20px 15px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    position: fixed;
+    /* position: fixed; */
   }
   .nav-links li{
     list-style: none;
