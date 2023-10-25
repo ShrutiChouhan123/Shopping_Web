@@ -1,8 +1,8 @@
 import React from 'react';
 import Product from './Product';
+import './index.css'
 
-
-const product_data = [
+export const product_data = [
     {
       id: 1,
       name: 'Product A',
@@ -76,7 +76,6 @@ const product_data = [
   ];
   
 function ProductData() {
-  debugger
   return (
    <>
    <div className='grid-container'>

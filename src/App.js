@@ -7,9 +7,14 @@ import Home from "./Components/Home";
 import Cart from "./Components/Cart";
 import Wishlist from "./Components/Wishlist"; 
 import { BrowserRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 
 function App() {
+   const cart = useSelector(state=>state.cart.cart);
+   const fev = useSelector(state=>state.fev.fev)
+
   return (
     <BrowserRouter>
 
@@ -24,11 +29,14 @@ function App() {
             <Link to='/products' className="nav-buttons">Products</Link>
           </li>
           <li className="upward" style={{ marginLeft: "40rem" }}>
-            <Link to='/cart' className="nav-buttons"><span class="material-icons">shopping_cart</span>
+            <Link to='/cart' className="nav-buttons">
+              {/* <span class="material-icons">shopping_cart</span> */}cart{cart.length}
             </Link>
           </li>
           <li className="forward" >
-            <Link to='/wishlist' className="nav-buttons"><i class="material-icons">favorite</i>
+            <Link to='/wishlist' className="nav-buttons">
+              {/* <i class="material-icons">favorite</i> */}
+              fevCart{fev.length}
             </Link>
           </li>
         </ul>
