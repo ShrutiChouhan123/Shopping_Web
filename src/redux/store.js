@@ -6,6 +6,7 @@ const store = configureStore({
         cart: cartReducer,
         fev : cartReducer,
         data : cartReducer,
+      
     }
 })
 

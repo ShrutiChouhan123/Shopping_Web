@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import Product from "./Components/ProductData";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
@@ -9,6 +9,8 @@ import Header from "./Components/Header";
 import Product_Details from "./Components/Product_Details";
 import { useSelector } from "react-redux";
 import Login from "./Components/Login";
+import Profile from "./Components/Profile";
+import Protected from "./Components/Protected";
 
 
 
@@ -17,21 +19,26 @@ import Login from "./Components/Login";
 function App() {
   // const cart = useSelector(state => state.cart.cart);
   // const fev = useSelector(state => state.fev.fev)
-  const datas = useSelector(state=>state.data.data)
-  return (
 
+  return (
+   
 
     <>
    
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} ></Route>
-          <Route exact path="/products" element={<Product/>}></Route>
+          <Route exact path="/" element={<Home/>} ></Route>
+
+          {/* <Route exact path="/products" element={<Protected Component={Product}/>}></Route> */}
+          <Route exact path="/products" element={<Product />}></Route>
+
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/wishlist" element={<Wishlist />}></Route>
           <Route exact path="/productdetails/:id" element={<Product_Details />}></Route>
           <Route exact path="login" element={<Login />}></Route>
+          <Route exact path="/products/profile" element={<Profile />}></Route>
+
 
         </Routes>
       </BrowserRouter>
