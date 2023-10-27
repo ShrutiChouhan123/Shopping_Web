@@ -15,11 +15,9 @@ export default function Header() {
                 <li>
                     <Link to='/' className="nav-buttons">Home</Link>
                 </li>
-
                 {/* <li className="center">
                     <Link to="/products" className="nav-buttons">Products</Link>
                 </li> */}
-
 
                 {/* <li className="upward" style={{ marginLeft: "40rem" }} >
                     <Link to='/cart' className="nav-buttons">
@@ -35,7 +33,7 @@ export default function Header() {
                         <span class="notification-counter">{fev.length}</span>
                     </Link>
                 </li> */}
-                <div class="dropdown" style={{marginLeft:"800px"}}>
+                <div class="dropdown" style={{ marginLeft: "800px" }}>
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <li className="forward">
                             <a className="nav-buttons">
@@ -45,8 +43,9 @@ export default function Header() {
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#"> <Link to='/login' className="nav-buttons">Login</Link></a>
+         
                         {/* <a class="dropdown-item" href="#"><Link to="/profile"  className="nav-buttons">Profile</Link></a> */}
-                        
+
                     </div>
                 </div>
                 {/* <li className="forward" style={{ marginLeft: "800px" }}>

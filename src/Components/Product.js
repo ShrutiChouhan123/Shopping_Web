@@ -38,8 +38,8 @@ function Product({ product }) {
                     </li>
 
                     {/* <li className="center">
-        <Link to="/products" className="nav-buttons">Products</Link>
-    </li> */}
+                        <Link to="/products" className="nav-buttons">Products</Link>
+                    </li> */}
 
 
                     <li className="upward" style={{ marginLeft: "40rem" }} >
@@ -56,10 +56,10 @@ function Product({ product }) {
                             <span class="notification-counter">{fev.length}</span>
                         </Link>
                     </li>
-                 
-                   <li className="forward">
-                   <Link to="/products/profile"  className="nav-buttons">Profile</Link>
-                   </li>
+
+                    <li className="forward">
+                        <Link to="/products/profile" className="nav-buttons">Profile</Link>
+                    </li>
                     {/* <li className="forward" >
                         <Link to='/login' className="nav-buttons">
                             <span><i class="fa fa-user" style={{ fontSize: "29px" }}></i></span>
@@ -68,19 +68,19 @@ function Product({ product }) {
                 </ul>
 
             </div>
-           <form method='post'>
-            <div className="grid-container" style={{ marginTop: "100px" }}>
-                <div className='productCard'>
-                    <Link to={"/productdetails/" + id}><img src={image} alt={name} /></Link>
+            <form method='post'>
+                <div className="grid-container" style={{ marginTop: "100px" }}>
+                    <div className='productCard'>
+                        <Link to={"/productdetails/" + id}><img src={image} alt={name} /></Link>
 
-                    <h4>{name}</h4>
-                    <p>{description}</p>
-                    <p>Price : {price}</p>
-                    <button style={{ background: "#032542", color: "white", borderRadius: "10rem", width: "50%" }} onClick={add}>Add to cart</button><br />
-                    <button style={{ background: "#032542", color: "white", borderRadius: "10rem", width: "50%" }} onClick={markFavorite}>Mark favourite</button>
+                        <h4>{name}</h4>
+                        <p>{description}</p>
+                        <p>Price : {price}</p>
+                        <button style={{ background: "#032542", color: "white", borderRadius: "10rem", width: "50%" }} onClick={add}>Add to cart</button><br />
+                        <button style={{ background: "#032542", color: "white", borderRadius: "10rem", width: "50%" }} onClick={markFavorite}>Mark favourite</button>
 
+                    </div>
                 </div>
-            </div>
             </form>
 
 

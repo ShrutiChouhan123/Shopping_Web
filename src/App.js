@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 import Product from "./Components/ProductData";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
 import Cart from "./Components/Cart";
 import Wishlist from "./Components/Wishlist";
@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import Login from "./Components/Login";
 import Profile from "./Components/Profile";
 import Protected from "./Components/Protected";
+import Protect2 from "./Components/Protect2";
 
 
 
@@ -19,6 +20,7 @@ import Protected from "./Components/Protected";
 function App() {
   // const cart = useSelector(state => state.cart.cart);
   // const fev = useSelector(state => state.fev.fev)
+  const [login,setlogin]=useState(false)
 
   return (
    
@@ -28,16 +30,18 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home/>} ></Route>
+          <Route exact path="/" element={login?(<Home/>):(<Navigate to="/login"/>)} ></Route>
 
           {/* <Route exact path="/products" element={<Protected Component={Product}/>}></Route> */}
-          <Route exact path="/products" element={<Product />}></Route>
+          <Route exact path="/products" element={login?(<Product/>):(<Navigate to="/login"/>)}></Route>
 
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/wishlist" element={<Wishlist />}></Route>
-          <Route exact path="/productdetails/:id" element={<Product_Details />}></Route>
-          <Route exact path="login" element={<Login />}></Route>
-          <Route exact path="/products/profile" element={<Profile />}></Route>
+          <Route path="/cart" element={login?(<Cart/>):(<Navigate to="/login"/>)}></Route>
+          <Route path="/wishlist" element={login?(<Wishlist/>):(<Navigate to="/login"/>)}></Route>
+          <Route exact path="/productdetails/:id" element={login?(<Product_Details/>):(<Navigate to="/login"/>)}></Route>
+          {/* <Route exact path="login" element={<Login />}></Route> */}
+          <Route exact path="/login" element={<Login setlogin={setlogin}/>}></Route>
+
+          <Route exact path="/products/profile" element={login?(<Profile/>):(<Navigate to="/login"/>)}></Route>
 
 
         </Routes>

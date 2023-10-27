@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import './index.css'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-function Login() {
+function Login({setlogin}) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate()
@@ -21,8 +21,10 @@ function Login() {
     console.log(password)
     console.log(users)
     if (newdata) {
-      localStorage.setItem("login", true)
+      // localStorage.setItem("login", true)
+      setlogin(true)
      navigate("/products")
+     console.log("sucess")
     }
     else {
       alert("not valide")
