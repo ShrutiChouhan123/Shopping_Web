@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import './App.css';
 import Product from "./Components/ProductData";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./Components/Home";
 import Cart from "./Components/Cart";
 import Wishlist from "./Components/Wishlist";
-import { useSelector } from "react-redux";
-import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import Product_Details from "./Components/Product_Details";
+import { useSelector } from "react-redux";
+import Login from "./Components/Login";
+
 
 
 
@@ -16,23 +17,27 @@ import Header from "./Components/Header";
 function App() {
   // const cart = useSelector(state => state.cart.cart);
   // const fev = useSelector(state => state.fev.fev)
-
+  const datas = useSelector(state=>state.data.data)
   return (
 
 
     <>
+   
       <BrowserRouter>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} ></Route>
-          <Route exact path="/products" element={<Product />}></Route>
+          <Route exact path="/products" element={<Product/>}></Route>
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="/wishlist" element={<Wishlist />}></Route>
+          <Route exact path="/productdetails/:id" element={<Product_Details />}></Route>
+          <Route exact path="login" element={<Login />}></Route>
+
         </Routes>
       </BrowserRouter>
      
    
-   
+  
 
     </>
 

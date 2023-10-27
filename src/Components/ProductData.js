@@ -6,8 +6,8 @@ export const product_data = [
       id: 1,
       name: 'Tomato Pizza',
       price: 99,
-      description: 'Description of the Product',
-      image: 'https://images.pexels.com/photos/3944311/pexels-photo-3944311.jpeg?auto=compress&cs=tinysrgb&w=200',
+      description: '',
+      image: 'https://images.pexels.com/photos/3944311/pexels-photo-3944311.jpeg?auto=compress&cs=tinysrgb&w=230',
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export const product_data = [
       name: 'Biryaani',
       price: 120,
       description: 'Description of the Product',
-      image: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&dpr=1',
+      image: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1',
     },
     {
       id: 4,
@@ -72,26 +72,33 @@ export const product_data = [
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/8992923/pexels-photo-8992923.jpeg?auto=compress&cs=tinysrgb&w=200',
     },
-    // {
-    //   id: 10,
-    //   name: 'Special food',
-    //   price: 200,
-    //   description: 'Description of the Product',
-    //   image: 'https://images.pexels.com/photos/16423835/pexels-photo-16423835/free-photo-of-tortilla-wraps-with-fries-and-sauce.jpeg?auto=compress&cs=tinysrgb&w=200'
-    // },
+    {
+      id: 11,
+      name: 'Special Thali',
+      price: 200,
+      description: 'Description of the Product',
+      image: 'https://img.freepik.com/premium-photo/indian-hindu-veg-thali-food-platter-selective-focus_466689-36051.jpg?auto=compress&cs=tinysrgb&w=280&h=500',
+    },
+   
     
   ];
+  
   
 function ProductData() {
   return (
    <>
    <div className='grid-container'>
+      
         {product_data.map((product) => {
           
           console.log(product,"product_data")
           return <Product key={product.id} product={product} />
         })}
       </div>
+      
+
+     
+   
    </>
   )
 }

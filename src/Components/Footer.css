@@ -1,9 +1,22 @@
-.footer {
-    /* bottom: 50rem; */
-    margin-top: 20px;
-    background-color: rgb(70, 87, 243);
-    height: 4rem;
-    /* margin: 100rem; */
-} 
-
-
+.footer{
+    width: 100%;
+    height: 170px;
+    background-color: #011121;
+    color: white;
+    font-family: sans-serif;
+}
+.contact{
+    margin-left: 20px;
+}
+.para{
+    margin-left: 20px;
+    
+}
+.para2{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.para3{
+    margin-left: 450px;
+}

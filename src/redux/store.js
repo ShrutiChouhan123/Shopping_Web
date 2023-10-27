@@ -4,7 +4,8 @@ import cartReducer from './createSlice';
 const store = configureStore({
     reducer: {
         cart: cartReducer,
-        fev : cartReducer
+        fev : cartReducer,
+        data : cartReducer,
     }
 })
 
