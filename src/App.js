@@ -20,35 +20,38 @@ import Protect2 from "./Components/Protect2";
 function App() {
   // const cart = useSelector(state => state.cart.cart);
   // const fev = useSelector(state => state.fev.fev)
-  const [login,setlogin]=useState(false)
+  // const [login,setlogin]=useState(false)
+  // const [route,setroute]=useState()
+  let login = JSON.parse(localStorage.getItem("login"))
 
   return (
-   
+
 
     <>
-   
+
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={login?(<Home/>):(<Navigate to="/login"/>)} ></Route>
+          <Route exact path="/" element={<Home />} ></Route>
 
           {/* <Route exact path="/products" element={<Protected Component={Product}/>}></Route> */}
-          <Route exact path="/products" element={login?(<Product/>):(<Navigate to="/login"/>)}></Route>
+          <Route exact path="/products" element={<Protected Component={login ? Product : Login}/>}></Route>
 
-          <Route path="/cart" element={login?(<Cart/>):(<Navigate to="/login"/>)}></Route>
-          <Route path="/wishlist" element={login?(<Wishlist/>):(<Navigate to="/login"/>)}></Route>
-          <Route exact path="/productdetails/:id" element={login?(<Product_Details/>):(<Navigate to="/login"/>)}></Route>
-          {/* <Route exact path="login" element={<Login />}></Route> */}
-          <Route exact path="/login" element={<Login setlogin={setlogin}/>}></Route>
+          <Route path="/cart" element={<Protected Component={login ? Cart : Login}/>}></Route>
+          <Route path="/wishlist" element={<Protected Component={login ? Wishlist : Login}/>}></Route>
+          <Route exact path="/productdetails/:id" element={<Protected Component={login ? Product_Details: Login}/>}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          {/* <Route exact path="/login" element={login?(<Login setlogin={setlogin}/>):(<Navigate to="/login"/>)}></Route> */}
+          {/* <Route exact path="/login" element={login?(<Login setlogin={setlogin}/>):(<Navigate to="/login"/>)}></Route> */}
 
-          <Route exact path="/products/profile" element={login?(<Profile/>):(<Navigate to="/login"/>)}></Route>
 
+          <Route exact path="/products/profile" element={<Protected Component={login ? Profile : Login}/>}></Route>
 
         </Routes>
       </BrowserRouter>
-     
-   
-  
+
+
+
 
     </>
 

@@ -6,16 +6,14 @@ import './index.css'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-
-
-
 function Product({ product }) {
+
+    const cart = useSelector(state => state.cart.cart);
+    const fev = useSelector(state => state.fev.fev);
+    const login = JSON.parse(localStorage.getItem('login')) 
 
     const { id, name, description, price, image } = product;
     const dispatch = useDispatch()
-
-
-
 
     const add = () => {
         dispatch(addTocart(product))
@@ -26,20 +24,19 @@ function Product({ product }) {
         dispatch(fevCart(product));
 
     }
-    const cart = useSelector(state => state.cart.cart);
-    const fev = useSelector(state => state.fev.fev);
+
     return (
         <>
-            <div className="body-navbar">
+            {login && <div><div className="body-navbar">
 
                 <ul className="nav-links">
                     <li>
                         <Link to='/' className="nav-buttons">Home</Link>
                     </li>
 
-                    {/* <li className="center">
+                    <li className="center">
                         <Link to="/products" className="nav-buttons">Products</Link>
-                    </li> */}
+                    </li>
 
 
                     <li className="upward" style={{ marginLeft: "40rem" }} >
@@ -68,7 +65,7 @@ function Product({ product }) {
                 </ul>
 
             </div>
-            <form method='post'>
+
                 <div className="grid-container" style={{ marginTop: "100px" }}>
                     <div className='productCard'>
                         <Link to={"/productdetails/" + id}><img src={image} alt={name} /></Link>
@@ -81,7 +78,8 @@ function Product({ product }) {
 
                     </div>
                 </div>
-            </form>
+            </div>}
+
 
 
 

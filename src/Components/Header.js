@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 export default function Header() {
-    // const cart = useSelector(state => state.cart.cart);
-    // const fev = useSelector(state => state.fev.fev);
-
 
     return (
 
@@ -42,7 +39,7 @@ export default function Header() {
                         </li>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#"> <Link to='/login' className="nav-buttons">Login</Link></a>
+                        <a class="dropdown-item" href="/login"> <Link to='/login' className="nav-buttons">Login</Link></a>
          
                         {/* <a class="dropdown-item" href="#"><Link to="/profile"  className="nav-buttons">Profile</Link></a> */}
 

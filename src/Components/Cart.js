@@ -55,7 +55,7 @@ function Cart() {
             </div>
 
             <div style={{ marginTop: "5rem", height: "2rem", width: "30rem" }}>
-              <div className='d-flex' className='productCard2'
+              <div className='d-flex' 
                 style={{ width: "15rem", marginLeft: "23rem" }}
               >
                 <img src={item.image} alt='' style={{ width: "50%", height: "50%" }} />

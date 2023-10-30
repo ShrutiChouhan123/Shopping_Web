@@ -7,16 +7,16 @@ function Profile() {
     console.log(users)
     // let newdata=users.find((data)=>data.username==username && data.password==password)
     const logout = () => {
-
-        localStorage.setItem("login", false)
+        let login = false
+        localStorage.setItem("login", JSON.stringify(login))
         navigate("/login")
 
     }
+    
     return (
         <>
             <table style={{ marginTop: "200px" }}>
                 {users.map((i) => {
-                    debugger
                     return (
                         <>
                           

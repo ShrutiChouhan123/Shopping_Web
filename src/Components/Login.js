@@ -4,43 +4,36 @@ import { useEffect } from 'react'
 import './index.css'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-function Login({setlogin}) {
+function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate()
 
   let users = useSelector(state => state.cart.user)
 
-  let newdata = users.find((data) => data.username == username && data.password == password)
 
   let handleSubmit = (event) => {
     event.preventDefault()
     setUsername('')
     setPassword('')
-    console.log(username)
-    console.log(password)
-    console.log(users)
+    let newdata = users.find((data) => data.username == username && data.password == password)
+
     if (newdata) {
-      // localStorage.setItem("login", true)
-      setlogin(true)
-     navigate("/products")
-     console.log("sucess")
+      let login=true
+      localStorage.setItem("login",JSON.stringify(login))
+      navigate("/products")
     }
     else {
-      alert("not valide")
+      alert("not valid")
     }
-     navigate("/products")
    
 
   }
-  // useEffect(() => {
-  //   let login = localStorage.getItem("login")
-  //   if (login) {
-  //     navigate("/products")
-  //   }
-    
-
-  // })
+  useEffect(() => {
+   if(localStorage.getItem("login")==="true"){
+    navigate("/products")
+   }
+  },[])
   return (
     <>
       <div class="page">
@@ -79,7 +72,6 @@ function Login({setlogin}) {
               <input type="number" id="password" placeholder='Enter Password' value={password} onChange={(e) => setPassword(e.target.value)} />
               <input type="submit" id="submit" value="Submit" onClick={handleSubmit} />
 
-              {/* <button onClick={handleSubmit}>submit</button> */}
             </div>
           </div>
         </div>
