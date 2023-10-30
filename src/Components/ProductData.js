@@ -95,10 +95,7 @@ function ProductData() {
           return <Product key={product.id} product={product} />
         })}
       </div>
-      
-
-     
-   
+ 
    </>
   )
 }

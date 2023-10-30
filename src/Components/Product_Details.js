@@ -10,10 +10,7 @@ const Product_Details = () => {
   return (
     <>
     <Product product={product}/>
-  
-
     </>
   )
 }
-
 export default Product_Details

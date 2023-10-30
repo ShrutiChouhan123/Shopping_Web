@@ -18,11 +18,9 @@ function Cart() {
     <>
       <h2>cart items</h2>
       {cart.map((item) => {
-
-
         return (
           <>
-            <div className="body-navbar">
+            <div className="body-navbar"> 
 
               <ul className="nav-links">
                 <li>
@@ -31,21 +29,21 @@ function Cart() {
 
                 <li className="center">
                   <Link to="/products" className="nav-buttons">Products</Link>
-                </li>
+                </li> 
 
 
                 <li className="upward" style={{ marginLeft: "40rem" }} >
                   <Link to='/cart' className="nav-buttons">
-                    <span class="material-icons" >shopping_cart </span>
-                    <span class="notification-counter">{cart.length}</span>
+                    <span className="material-icons" >shopping_cart </span>
+                    <span className="notification-counter">{cart.length}</span>
 
                   </Link>
 
                 </li>
                 <li className="forward" >
                   <Link to='/wishlist' className="nav-buttons">
-                    <span class="material-icons" > <i class="material-icons">favorite</i></span>
-                    <span class="notification-counter">{fev.length}</span>
+                    <span className="material-icons" > <i className="material-icons">favorite</i></span>
+                    <span className="notification-counter">{fev.length}</span>
                   </Link>
                 </li>
                 
@@ -54,17 +52,15 @@ function Cart() {
 
             </div>
 
-            <div style={{ marginTop: "5rem", height: "2rem", width: "30rem" }}>
-              <div className='d-flex' 
+            <div style={{ marginTop: "8rem", height: "2rem", width: "30rem" }}>
+              <div className='productCard2' 
                 style={{ width: "15rem", marginLeft: "23rem" }}
               >
                 <img src={item.image} alt='' style={{ width: "50%", height: "50%" }} />
-                <div style={{ marginTop: "5rem" }}>
+                <div style={{ marginTop: "0rem" }}>
                   <h4 style={{ marginLeft: "2rem" }}>{item.name}</h4>
                   <h4 style={{ marginLeft: "2rem" }}>{item.price}</h4>
-                  {/* <button style={{marginLeft:"4rem"}} className='btn'>remove</button> */}
-
-                  <button class="button-28" role="button" style={{ marginLeft: "2rem", width: "70%" }} onClick={() => dispatch(removeCart({ id: item.id }))}>Remove</button>
+                  <button className="button-28" style={{ marginLeft: "2rem", width: "70%" }} onClick={() => dispatch(removeCart({ id: item.id }))}>Remove</button>
 
 
                 </div>
