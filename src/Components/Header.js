@@ -19,6 +19,8 @@ export default function Header() {
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <div style={{ color: "white", marginLeft: "3rem",width:"20%" }}><Link to='/login' className="nav-buttons">Login</Link></div>
+                        <div style={{ color: "white", marginLeft: "3rem",width:"20%" }}><Link to='/register' className="nav-buttons">Register</Link></div>
+
                     </div>
                 </div>
             </ul>

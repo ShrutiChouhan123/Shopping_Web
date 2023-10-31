@@ -9,6 +9,7 @@ import Product_Details from "./Components/Product_Details";
 import Login from "./Components/Login";
 import Profile from "./Components/Profile";
 import Protected from "./Components/Protected";
+import Register from './Components/Register';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
           <Route path="/wishlist" element={<Protected Component={login ? Wishlist : Login}/>}></Route>
           <Route exact path="/productdetails/:id" element={<Protected Component={login ? Product_Details: Login}/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
+          <Route exact path="/register" element={<Register/>}></Route>
+
           <Route exact path="/products/profile" element={<Protected Component={login ? Profile : Login}/>}></Route>
         </Routes>
       </BrowserRouter>

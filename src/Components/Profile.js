@@ -25,6 +25,8 @@ function Profile() {
                                 <h1>{i.username}</h1>
                                 <p class="title">{i.mob}</p>
                                 <p>{i.city}</p>
+                                <p>{i.email}</p>
+
 
                                 <p><button onClick={logout}>logout</button></p>
                             </div>

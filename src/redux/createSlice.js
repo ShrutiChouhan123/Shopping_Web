@@ -110,10 +110,13 @@ const cartSlice = createSlice({
         id: 1,
         username: "shruti",
         password: "123",
+        email:"shruti@gmail.com",
         mob:7987162371,
         city:'ujjain'
       }
-    ]
+    ],
+    isLogin : false
+
   },
   reducers: {
     addTocart: (state, actions) => {     
@@ -158,10 +161,25 @@ const cartSlice = createSlice({
       }
       // console.log(existCart)
    
+    },
+    // for singup user.
+    registerUser : (state,actions)=>{
+      let users = actions.payload
+      if(!state.user.find((x) => x.email === users.email)){
+          state.user = [
+              {
+                  ...state.user,
+                  ...users
+              }
+          ]
+          console.log("User successfully added: ", users);
+      }else{
+          console.log("Invalid credentials");
+      }
     }
   }
 })
 
 export default cartSlice.reducer;
 
-export const {addTocart, fevCart, removeCart, removeWishlist, productData ,increse,decrese} = cartSlice.actions;
+export const {registerUser,addTocart, fevCart, removeCart, removeWishlist, productData ,increse,decrese} = cartSlice.actions;
