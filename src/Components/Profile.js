@@ -13,7 +13,6 @@ function Profile() {
         navigate("/login")
 
     }
-
     return (
         <>
             <table style={{ marginTop: "200px" }}>
@@ -26,8 +25,6 @@ function Profile() {
                                 <p class="title">{i.mob}</p>
                                 <p>{i.city}</p>
                                 <p>{i.email}</p>
-
-
                                 <p><button onClick={logout}>logout</button></p>
                             </div>
 
