@@ -34,10 +34,7 @@ function Profile() {
                     )
                 })}
             </table>
-
-
         </>
     )
 }
-
 export default Profile

@@ -4,9 +4,6 @@ import './index.css';
 import { removeWishlist } from '../redux/createSlice';
 import { Link } from 'react-router-dom';
 
-
-
-
 function Wishlist() {
   const dispatch = useDispatch();
   const fev = useSelector(state => state.fev.fev)
@@ -22,7 +19,7 @@ function Wishlist() {
 
               <ul className="nav-links">
                 <li>
-                  <Link to='/' className="nav-buttons">Home</Link>
+                  <Link to='/' className="nav-buttons"><i class="fa fa-home" style={{fontSize:"35px"}}></i></Link>
                 </li>
 
                 <li className="center">
@@ -62,9 +59,6 @@ function Wishlist() {
           </>
         )
       })}
-
-
-
 
 
     </>

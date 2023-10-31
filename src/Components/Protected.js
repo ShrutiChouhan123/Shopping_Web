@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Protected(props) {
     const {Component} = props;
-
     let navigate=useNavigate()
     useEffect(()=>{
    let users = JSON.parse(localStorage.getItem("login"))

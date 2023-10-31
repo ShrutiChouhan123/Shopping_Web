@@ -13,10 +13,11 @@
     
 }
 .para2{
-    height: 50px;
+    height: 40px;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(84, 84, 87, 0.042);
 }
 .para3{
+    color: black;
     margin-left: 450px;
 }

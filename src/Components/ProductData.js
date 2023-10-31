@@ -8,6 +8,7 @@ export const product_data = [
       price: 99,
       description: '',
       image: 'https://images.pexels.com/photos/3944311/pexels-photo-3944311.jpeg?auto=compress&cs=tinysrgb&w=230',
+      quntity:1
     },
     {
       id: 2,
@@ -15,6 +16,8 @@ export const product_data = [
       price: 150,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/11912788/pexels-photo-11912788.jpeg?auto=compress&cs=tinysrgb&w=200',
+      quntity:1
+
     },
     {
       id: 3,
@@ -22,6 +25,8 @@ export const product_data = [
       price: 120,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=1',
+      quntity:1
+
     },
     {
       id: 4,
@@ -29,6 +34,8 @@ export const product_data = [
       price: 99,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/12737663/pexels-photo-12737663.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&dpr=1',
+      quntity:1
+
     },
     {
       id: 5,
@@ -36,6 +43,8 @@ export const product_data = [
       price: 199,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/11111603/pexels-photo-11111603.jpeg?auto=compress&cs=tinysrgb&w=200',
+      quntity:1
+
     },
     {
       id: 6,
@@ -43,6 +52,8 @@ export const product_data = [
       price: 140,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/15126957/pexels-photo-15126957/free-photo-of-a-slice-of-cheesy-pizza.jpeg?auto=compress&cs=tinysrgb&w=200',
+      quntity:1
+
     },
     {
       id: 7,
@@ -50,6 +61,8 @@ export const product_data = [
       price: 99,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/12567335/pexels-photo-12567335.jpeg?auto=compress&cs=tinysrgb&w=200',
+      quntity:1
+
     },
     {
       id: 8,
@@ -57,6 +70,8 @@ export const product_data = [
       price: 110,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/12667658/pexels-photo-12667658.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&dpr=1',
+      quntity:1
+
     },
     {
       id: 9,
@@ -64,6 +79,8 @@ export const product_data = [
       price: 120,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/12737657/pexels-photo-12737657.jpeg?auto=compress&cs=tinysrgb&w=200',
+      quntity:1
+
     },
     {
       id: 10,
@@ -71,6 +88,8 @@ export const product_data = [
       price: 45,
       description: 'Description of the Product',
       image: 'https://images.pexels.com/photos/8992923/pexels-photo-8992923.jpeg?auto=compress&cs=tinysrgb&w=200',
+      quntity:1
+
     },
     {
       id: 11,
@@ -78,6 +97,8 @@ export const product_data = [
       price: 200,
       description: 'Description of the Product',
       image: 'https://img.freepik.com/premium-photo/indian-hindu-veg-thali-food-platter-selective-focus_466689-36051.jpg?auto=compress&cs=tinysrgb&w=280&h=500',
+      quntity:1
+
     },
    
     
@@ -91,7 +112,7 @@ function ProductData() {
       
         {product_data.map((product) => {
           
-          console.log(product,"product_data")
+          // console.log(product,"product_data")
           return <Product key={product.id} product={product} />
         })}
       </div>
